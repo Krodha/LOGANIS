@@ -1,0 +1,114 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Sprites/Fondo/Menú 2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Fondo/Menú 3.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Fondo/Menú 1.png" type="Texture" id=3]
+[ext_resource path="res://Menú.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/Fonts/8bitOperatorPlus8-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/Fonts/8-bit Arcade In.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Sprites/Player/3.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Player/4.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Player/5.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Player/1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Player/2.png" type="Texture" id=11]
+[ext_resource path="res://Sounds/Iron Man .wav" type="AudioStream" id=12]
+[ext_resource path="res://Sounds/Click .wav" type="AudioStream" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "Fondo",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 6 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Fantasmiko",
+"speed": 5.0
+} ]
+
+[node name="Menú" type="Node"]
+script = ExtResource( 4 )
+
+[node name="Fondo" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
+frames = SubResource( 1 )
+animation = "Fondo"
+centered = false
+
+[node name="MenuContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -258.0
+margin_top = -170.0
+margin_right = -156.0
+margin_bottom = -72.0
+rect_scale = Vector2( 5, 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="MenuContainer"]
+margin_right = 102.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.752941, 0.721569, 0.721569, 1 )
+custom_colors/font_color_shadow = Color( 0.780392, 0, 1, 1 )
+text = "LOGANIS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viciar" type="Button" parent="MenuContainer"]
+margin_top = 16.0
+margin_right = 102.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "XOGAR"
+flat = true
+
+[node name="Salir" type="Button" parent="MenuContainer"]
+margin_top = 37.0
+margin_right = 102.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
+text = "SAIR"
+flat = true
+
+[node name="Personaje" type="AnimatedSprite" parent="."]
+position = Vector2( 154.406, 474.788 )
+scale = Vector2( 0.428135, 0.436018 )
+frames = SubResource( 5 )
+animation = "Fantasmiko"
+
+[node name="Bgmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -10.0
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[connection signal="pressed" from="MenuContainer/Viciar" to="." method="_on_Viciar_pressed"]
+[connection signal="pressed" from="MenuContainer/Salir" to="." method="_on_Salir_pressed"]

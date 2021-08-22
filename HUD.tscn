@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sounds/Sonido perder.wav" type="AudioStream" id=1]
+[ext_resource path="res://Sprites/Fonts/standard_style.tres" type="DynamicFont" id=2]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 2.0
+margin_top = 217.0
+margin_right = 162.0
+margin_bottom = 228.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = ExtResource( 2 )
+text = "PAQUETE!!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MENU" type="Button" parent="."]
+visible = false
+margin_left = -1.0
+margin_top = 274.0
+margin_right = 82.0
+margin_bottom = 304.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
+text = "ENTRADA"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="REINTENTAR" type="Button" parent="."]
+visible = false
+margin_left = 284.0
+margin_top = 290.0
+margin_right = 373.0
+margin_bottom = 313.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
+text = "OUTRA MÁIS"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Perder" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

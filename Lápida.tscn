@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Obstáculos/Lápida.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 35.3444
+height = 56.9127
+
+[node name="Lápida" type="StaticBody2D"]
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 75.6604, 76.3675 )
+shape = SubResource( 1 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Before I Forget 8 Bit .mp3-ee9f59ee6da821467c4f773c4e2d5e6c.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Before I Forget 8 Bit .mp3"
+dest_files=[ "res://.import/Before I Forget 8 Bit .mp3-ee9f59ee6da821467c4f773c4e2d5e6c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

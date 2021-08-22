@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Chop Suey.mp3-93520fd4ac1b354730b1ae4c1dc0a894.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Chop Suey.mp3"
+dest_files=[ "res://.import/Chop Suey.mp3-93520fd4ac1b354730b1ae4c1dc0a894.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

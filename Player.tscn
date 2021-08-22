@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Player/3.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Player/4.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Player/5.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/1.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Movimiento",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 82.9342
+height = 202.273
+
+[node name="Player" type="KinematicBody2D"]
+scale = Vector2( 0.25, 0.25 )
+script = ExtResource( 1 )
+velocidad = 10
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Movimiento"
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 301.227, 359.21 )
+rotation = 0.10472
+shape = SubResource( 2 )
