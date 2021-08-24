@@ -16,4 +16,4 @@ func _on_HUD_perder():
 
 
 func _on_Escape_pressed():
-	get_tree().call_deferred("change_scene","res://Menú.tscn")
+	$BGmusic.stop()

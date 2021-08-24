@@ -13,8 +13,8 @@
 [ext_resource path="res://Cruz.gd" type="Script" id=11]
 [ext_resource path="res://Sounds/Symphony of Destruction solo 8 bit .wav" type="AudioStream" id=12]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=13]
-[ext_resource path="res://HUD.gd" type="Script" id=14]
 [ext_resource path="res://Sprites/Fonts/standard_style.tres" type="DynamicFont" id=15]
+[ext_resource path="res://Sprites/Fondo/Retart Labe.png" type="Texture" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -153,7 +153,6 @@ light_mask = 2
 position = Vector2( 5149.9, -345.174 )
 
 [node name="HUD" parent="." instance=ExtResource( 13 )]
-script = ExtResource( 14 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
 light_mask = 3
@@ -165,13 +164,13 @@ stream = ExtResource( 12 )
 volume_db = -10.0
 
 [node name="Escape" type="Button" parent="."]
-margin_left = 484.157
+margin_left = 589.36
 margin_top = 4.76218
-margin_right = 536.157
-margin_bottom = 34.7622
-rect_scale = Vector2( 3, 3 )
+margin_right = 2393.36
+margin_bottom = 1802.76
+rect_scale = Vector2( 0.025, 0.025 )
 custom_fonts/font = ExtResource( 15 )
-text = "ESC"
+icon = ExtResource( 16 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -179,4 +178,4 @@ __meta__ = {
 
 [connection signal="perder" from="HUD" to="." method="_on_HUD_perder"]
 [connection signal="tree_exiting" from="Player" to="HUD" method="_on_Player_tree_exiting"]
-[connection signal="pressed" from="Escape" to="." method="_on_Escape_pressed"]
+[connection signal="pressed" from="Escape" to="HUD" method="_on_Escape_pressed"]
