@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sounds/Sonido perder.wav" type="AudioStream" id=1]
 [ext_resource path="res://Sprites/Fonts/standard_style.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Sprites/Fondo/Restart menu.png" type="Texture" id=3]
 [ext_resource path="res://HUD.gd" type="Script" id=4]
+[ext_resource path="res://Sounds/Click .wav" type="AudioStream" id=5]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 4 )
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [node name="Perder" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )

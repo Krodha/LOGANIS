@@ -159,10 +159,6 @@ light_mask = 3
 position = Vector2( 84.5648, 435.174 )
 velocidad = 1
 
-[node name="BGmusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
-volume_db = -10.0
-
 [node name="Escape" type="Button" parent="."]
 margin_left = 589.36
 margin_top = 4.76218
@@ -176,6 +172,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="BGmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -10.0
+
 [connection signal="perder" from="HUD" to="." method="_on_HUD_perder"]
 [connection signal="tree_exiting" from="Player" to="HUD" method="_on_Player_tree_exiting"]
 [connection signal="pressed" from="Escape" to="HUD" method="_on_Escape_pressed"]
+[connection signal="pressed" from="Escape" to="." method="_on_Escape_pressed"]
