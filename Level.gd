@@ -14,3 +14,19 @@ func _on_HUD_perder():
 
 func _on_Escape_pressed():
 	$BGmusic.stop()
+	
+	"""
+		DIRECTOR:
+			Lucas 
+		
+		DESARROLLADOR:
+			Cruces
+		
+		DISEÑADOR GRÁFICO:
+			Fernández
+		
+		AGRADECIMIENTOS A:
+			8 Bit Universe por su música en 8 bits
+		
+		"""
+
