@@ -10,11 +10,17 @@ func _process(delta):
 	get_node("CAMINO").scroll_base_offset += Vector2(-4,0) * 100 * delta
 
 func _on_HUD_perder():
+	get_tree().call_deferred("reload_current_scene")
+	$Perder.play()
 	$BGmusic.stop()
 
 func _on_Escape_pressed():
 	$BGmusic.stop()
 	
+
+func _on_Area2D_body_entered(Player):
+	emit_signal("perder")
+
 	"""
 		DIRECTOR:
 			Lucas 
