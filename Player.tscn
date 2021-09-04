@@ -19,7 +19,9 @@ animations = [ {
 radius = 82.9342
 height = 202.273
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"Player",
+]]
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 1 )
 velocidad = 10
