@@ -1,4 +1,7 @@
 extends KinematicBody2D
+
+signal perder
+
 export (int) var velocidad 
 onready var movimiento : Vector2
 onready var saltos : int
@@ -10,7 +13,8 @@ const SUELO = Vector2(0,-1)
 func _process(delta):
 	_is_on_floor(delta)
 	movimiento.x = velocidad
-
+	if $RayCast2D.is_colliding():
+		emit_signal("perder")
 
 func _is_on_floor(delta):
 	movimiento += GRAVEDAD * 200 * delta
@@ -21,5 +25,4 @@ func _is_on_floor(delta):
 	movimiento = move_and_slide(movimiento, SUELO)
 	
 	# Estuve creando la variable de "saltos" para inrentar limitar el Nº de saltos a 1 
-
 

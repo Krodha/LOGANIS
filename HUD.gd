@@ -15,6 +15,3 @@ func _on_reanudar_pressed():
 	get_tree().call_deferred("reload_current_scene")
 	$Click.play()
 
-
-func _on_Area2D_perder():
-	_on_reanudar_pressed()

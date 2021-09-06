@@ -28,3 +28,7 @@ func _on_Escape_pressed():
 	AGRADECEMENTOS A:
 		8 Bit Universe pola súa música en 8 bits
 	"""
+
+
+func _on_Player_perder():
+	get_tree().call_deferred("reload_current_scene")

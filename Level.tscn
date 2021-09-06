@@ -179,6 +179,6 @@ volume_db = -10.0
 
 [node name="Area2D" parent="." instance=ExtResource( 14 )]
 
+[connection signal="perder" from="Player" to="." method="_on_Player_perder"]
 [connection signal="pressed" from="Escape" to="." method="_on_Escape_pressed"]
 [connection signal="pressed" from="Escape" to="HUD" method="_on_Escape_pressed"]
-[connection signal="perder" from="Area2D" to="HUD" method="_on_Area2D_perder"]
