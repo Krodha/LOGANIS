@@ -26,3 +26,11 @@ func _is_on_floor(delta):
 	
 	# Estuve creando la variable de "saltos" para inrentar limitar el Nº de saltos a 1 
 
+
+
+
+
+
+func _on_Area2D_body_entered(body):
+	if body is TileMap:
+		emit_signal("perder")

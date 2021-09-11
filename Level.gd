@@ -32,8 +32,3 @@ func _on_Escape_pressed():
 
 func _on_Player_perder():
 	get_tree().call_deferred("reload_current_scene")
-
-
-func _on_Collision_body_entered(body):
-	if body is KinematicBody2D:
-		emit_signal("perder")
