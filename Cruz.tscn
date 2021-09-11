@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Sprites/Obstáculos/Cruz.png" type="Texture" id=1]
+[ext_resource path="res://Cruz.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35.1733, 10 )
@@ -9,6 +10,7 @@ extents = Vector2( 35.1733, 10 )
 extents = Vector2( 13.96, 57.2215 )
 
 [node name="Cruz" type="StaticBody2D"]
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
@@ -24,3 +26,10 @@ shape = SubResource( 1 )
 visible = false
 position = Vector2( 79.196, 82.0244 )
 shape = SubResource( 2 )
+
+[node name="AreaCruz" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaCruz"]
+polygon = PoolVector2Array( 60.126, 24.8387, 75.2063, 16.1079, 91.8741, 13.7268, 93.4615, 47.856, 115.685, 47.856, 117.272, 74.8418, 95.0489, 74.8418, 95.0489, 132.782, 101.398, 141.513, 100.605, 148.656, 54.5701, 148.656, 53.7764, 135.957, 58.5386, 131.988, 60.9197, 75.6355, 33.1402, 74.0481, 32.3465, 47.856, 58.5386, 47.0623 )
+
+[connection signal="body_entered" from="AreaCruz" to="." method="_on_AreaCruz_body_entered"]

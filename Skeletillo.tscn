@@ -1,12 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/Obstáculos/Skeletillo.png" type="Texture" id=1]
+[ext_resource path="res://Skeletillo.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 17.7056
 height = 35.2584
 
 [node name="Skeletillo" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="AreaSkeleto" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaSkeleto"]
+polygon = PoolVector2Array( 64.5985, 15.2415, 81.6074, 14.9265, 92.3167, 26.2658, 103.341, 31.3055, 105.546, 65.9533, 100.821, 85.4821, 93.5767, 97.1364, 97.3564, 115.405, 101.766, 127.06, 100.821, 133.359, 80.3475, 133.989, 80.0325, 129.264, 88.852, 127.374, 86.6471, 107.216, 83.8123, 93.3566, 86.6471, 80.7574, 80.0325, 75.0878, 71.2131, 77.6076, 17.9814, 98.3963, 16.4065, 93.0416, 76.8827, 67.2133, 84.1273, 60.2837, 80.9775, 49.5744, 77.5127, 42.9598, 76.2528, 31.6205, 68.6932, 35.4002, 65.8584, 44.2197, 60.1888, 42.0148, 55.779, 37.6051, 58.6139, 28.1557, 59.8738, 26.2658 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
@@ -18,3 +25,5 @@ visible = false
 position = Vector2( 83.9052, 50.1933 )
 rotation = -0.507891
 shape = SubResource( 1 )
+
+[connection signal="body_entered" from="AreaSkeleto" to="." method="_on_AreaSkeleto_body_entered"]

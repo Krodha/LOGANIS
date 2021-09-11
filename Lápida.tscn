@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/Obstáculos/Lápida.png" type="Texture" id=1]
+[ext_resource path="res://Lápida.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 35.3444
@@ -8,6 +9,7 @@ height = 56.9127
 
 [node name="Lápida" type="StaticBody2D"]
 scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
@@ -18,3 +20,10 @@ centered = false
 visible = false
 position = Vector2( 75.6604, 76.3675 )
 shape = SubResource( 1 )
+
+[node name="AreaLapida" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaLapida"]
+polygon = PoolVector2Array( 34.8045, 28.6667, 52.7381, 13.8793, 61.8622, 9.47455, 91.4369, 8.8453, 107.483, 18.5987, 116.292, 31.4983, 115.348, 139.1, 104.022, 147.28, 35.4337, 140.044 )
+
+[connection signal="body_entered" from="AreaLapida" to="." method="_on_AreaLapida_body_entered"]
