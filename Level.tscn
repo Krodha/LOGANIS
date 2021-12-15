@@ -190,5 +190,5 @@ volume_db = -10.0
 
 [connection signal="body_entered" from="CAMINO/ParallaxLayer/Fin" to="." method="_on_Fin_body_entered"]
 [connection signal="perder" from="Player" to="." method="_on_Player_perder"]
-[connection signal="pressed" from="Escape" to="HUD" method="_on_Escape_pressed"]
 [connection signal="pressed" from="Escape" to="." method="_on_Escape_pressed"]
+[connection signal="pressed" from="Escape" to="HUD" method="_on_Escape_pressed"]
