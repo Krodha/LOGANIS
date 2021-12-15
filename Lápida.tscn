@@ -7,7 +7,9 @@
 radius = 35.3444
 height = 56.9127
 
-[node name="Lápida" type="StaticBody2D"]
+[node name="Lápida" type="StaticBody2D" groups=[
+"Obstaculo",
+]]
 scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 2 )
 

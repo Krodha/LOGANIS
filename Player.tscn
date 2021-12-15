@@ -16,7 +16,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 82.9342
+radius = 65.4403
 height = 202.273
 
 [node name="Player" type="KinematicBody2D" groups=[
@@ -32,17 +32,9 @@ animation = "Movimiento"
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 301.227, 359.21 )
 rotation = 0.10472
 shape = SubResource( 2 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 202.874, 348.193 )
-scale = Vector2( 2, 45 )
-enabled = true
-cast_to = Vector2( 100, 0 )
-collide_with_areas = true
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
@@ -50,5 +42,10 @@ collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PoolVector2Array( 236.73, 281.781, 244.146, 238.343, 260.038, 215.035, 279.109, 182.192, 315.13, 166.3, 354.331, 176.895, 385.055, 197.024, 382.936, 248.938, 380.817, 301.911, 370.222, 457.652, 357.509, 509.566, 299.238, 541.35, 236.73, 551.944, 201.768, 565.717, 207.065, 545.588, 230.373, 478.841, 224.017, 413.155, 231.433, 365.479 )
+
+[node name="RayCastSuelo" type="RayCast2D" parent="."]
+position = Vector2( 302.058, 359.14 )
+enabled = true
+cast_to = Vector2( 0, 220 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
