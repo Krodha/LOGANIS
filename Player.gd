@@ -62,7 +62,7 @@ func _is_on_floor(delta):
 
 
 func _on_Area2D_body_entered(body):
-	if body is StaticBody2D:
+	if body.is_in_group("Obstaculo"):
 		emit_signal("perder")
 	if body.is_in_group("fin"):
 		get_tree().call_deferred("change_scene", "res://Menú.tscn")
