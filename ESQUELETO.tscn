@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/Obstáculos/Skeletillo.png" type="Texture" id=1]
+
+[node name="ESQUELETO" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -16.5522, -67.1376, 4.92093, -67.6095, 31.5854, -48.4961, 32.2933, -12.3929, 18.1352, 25.1261, 30.1696, 59.3416, -3.80991, 59.1056, -2.63006, 5.30477, -61.3862, 23.9463, -67.7574, 9.08027, -7.11346, -19, -7.5854, -33.866, -26.9348, -38.3494, -23.6313, -60.5305 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
