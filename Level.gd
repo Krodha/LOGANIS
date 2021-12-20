@@ -41,3 +41,18 @@ func _on_Player_perder():
 func _on_Fin_body_entered(body):
 	if body is KinematicBody2D:
 		get_tree().call_deferred("change_scene", "res://Menú.tscn")
+
+
+func _on_CRUCES_body_entered(body):
+	if body is KinematicBody2D:
+		get_tree().call_deferred("reload_current_scene")
+
+
+func _on_ESQUELETO_body_entered(body):
+	if body is KinematicBody2D:
+		get_tree().call_deferred("reload_current_scene")
+
+
+func _on_ESQUELETO2_body_entered(body):
+	if body is KinematicBody2D:
+		get_tree().call_deferred("reload_current_scene")
