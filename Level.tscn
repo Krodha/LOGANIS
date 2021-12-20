@@ -136,14 +136,6 @@ light_mask = 2
 position = Vector2( 2489.36, 506.942 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Fin" type="Area2D" parent="CAMINO/ParallaxLayer" groups=[
-"fin",
-]]
-
-[node name="FinCollision" type="CollisionShape2D" parent="CAMINO/ParallaxLayer/Fin"]
-position = Vector2( 10797.7, 322.505 )
-shape = SubResource( 5 )
-
 [node name="CRUCES" parent="CAMINO/ParallaxLayer" instance=ExtResource( 8 )]
 position = Vector2( 956.871, 532.503 )
 scale = Vector2( 0.75, 0.75 )
@@ -162,6 +154,14 @@ position = Vector2( 2962.09, 521.915 )
 [node name="ESQUELETO2" parent="CAMINO/ParallaxLayer" instance=ExtResource( 7 )]
 position = Vector2( 9688.57, 279.629 )
 scale = Vector2( 0.75, 0.75 )
+
+[node name="Fin" type="Area2D" parent="CAMINO/ParallaxLayer" groups=[
+"fin",
+]]
+
+[node name="FinCollision" type="CollisionShape2D" parent="CAMINO/ParallaxLayer/Fin"]
+position = Vector2( 10797.7, 322.505 )
+shape = SubResource( 5 )
 
 [node name="HUD" parent="." instance=ExtResource( 13 )]
 
@@ -187,10 +187,10 @@ __meta__ = {
 stream = ExtResource( 12 )
 volume_db = -10.0
 
-[connection signal="body_entered" from="CAMINO/ParallaxLayer/Fin" to="." method="_on_Fin_body_entered"]
 [connection signal="body_entered" from="CAMINO/ParallaxLayer/CRUCES" to="." method="_on_CRUCES_body_entered"]
 [connection signal="body_entered" from="CAMINO/ParallaxLayer/ESQUELETO" to="." method="_on_ESQUELETO_body_entered"]
 [connection signal="body_entered" from="CAMINO/ParallaxLayer/ESQUELETO2" to="." method="_on_ESQUELETO2_body_entered"]
+[connection signal="body_entered" from="CAMINO/ParallaxLayer/Fin" to="." method="_on_Fin_body_entered"]
 [connection signal="perder" from="Player" to="." method="_on_Player_perder"]
 [connection signal="pressed" from="Escape" to="HUD" method="_on_Escape_pressed"]
 [connection signal="pressed" from="Escape" to="." method="_on_Escape_pressed"]
