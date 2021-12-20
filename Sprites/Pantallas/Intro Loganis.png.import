@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chiquilápida.png-325ff82834952a2aa27e727352e10a60.stex"
+path="res://.import/Intro Loganis.png-fac2981b1912cd3e86f03b4440e9e74b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Obstáculos/Chiquilápida.png"
-dest_files=[ "res://.import/Chiquilápida.png-325ff82834952a2aa27e727352e10a60.stex" ]
+source_file="res://Sprites/Pantallas/Intro Loganis.png"
+dest_files=[ "res://.import/Intro Loganis.png-fac2981b1912cd3e86f03b4440e9e74b.stex" ]
 
 [params]
 
