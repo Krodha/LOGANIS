@@ -126,33 +126,33 @@ tile_data = PoolIntArray( 131197, 1610612736, 0, 131218, 1610612736, 0, 131262, 
 "Obstaculo",
 ] instance=ExtResource( 6 )]
 light_mask = 2
-position = Vector2( 2625.63, 513.932 )
+position = Vector2( 2625.75, 514.307 )
 scale = Vector2( 0.45, 0.45 )
 
 [node name="Lápida2" parent="CAMINO/ParallaxLayer" groups=[
 "Obstaculo",
 ] instance=ExtResource( 6 )]
 light_mask = 2
-position = Vector2( 2489.36, 506.942 )
+position = Vector2( 2489.62, 507.207 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="CRUCES" parent="CAMINO/ParallaxLayer" instance=ExtResource( 8 )]
-position = Vector2( 956.871, 532.503 )
+position = Vector2( 961.698, 530.366 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="CRUCES2" parent="CAMINO/ParallaxLayer" instance=ExtResource( 8 )]
-position = Vector2( 2577.62, 554.511 )
+position = Vector2( 2581.36, 554.675 )
 scale = Vector2( 0.35, 0.35 )
 
 [node name="CRUCES3" parent="CAMINO/ParallaxLayer" instance=ExtResource( 8 )]
-position = Vector2( 5712.44, 544.785 )
+position = Vector2( 5712.85, 542.679 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="ESQUELETO" parent="CAMINO/ParallaxLayer" instance=ExtResource( 7 )]
-position = Vector2( 2962.09, 521.915 )
+position = Vector2( 2960.6, 523.581 )
 
 [node name="ESQUELETO2" parent="CAMINO/ParallaxLayer" instance=ExtResource( 7 )]
-position = Vector2( 9688.57, 279.629 )
+position = Vector2( 9688.91, 280.347 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="Fin" type="Area2D" parent="CAMINO/ParallaxLayer" groups=[
@@ -186,6 +186,8 @@ __meta__ = {
 [node name="BGmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
 volume_db = -10.0
+
+[node name="Reiniciar" type="Timer" parent="."]
 
 [connection signal="body_entered" from="CAMINO/ParallaxLayer/CRUCES" to="." method="_on_CRUCES_body_entered"]
 [connection signal="body_entered" from="CAMINO/ParallaxLayer/ESQUELETO" to="." method="_on_ESQUELETO_body_entered"]

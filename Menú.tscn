@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Sprites/Fondo/Menú 2.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Fondo/Menú 3.png" type="Texture" id=2]
@@ -39,6 +39,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 5 )
+
 [node name="Menú" type="Node"]
 script = ExtResource( 4 )
 
@@ -53,10 +56,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -258.0
-margin_top = -170.0
-margin_right = -156.0
-margin_bottom = -72.0
+margin_left = -258.631
+margin_top = -170.21
+margin_right = -156.631
+margin_bottom = -72.2102
 rect_scale = Vector2( 5, 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -109,6 +112,20 @@ volume_db = -10.0
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 420.136
+margin_top = 227.084
+margin_right = 478.136
+margin_bottom = 242.084
+rect_rotation = -25.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "v ALFA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="MenuContainer/Viciar" to="." method="_on_Viciar_pressed"]
 [connection signal="pressed" from="MenuContainer/Salir" to="." method="_on_Salir_pressed"]
