@@ -24,7 +24,7 @@ func _physics_process(delta):
 		saltos = 0
 		can_jump = true
 	
-	if saltos == 1:
+	if saltos >= 1:
 		can_jump = false
 	
 	if Input.is_action_just_pressed("space") and can_jump:
