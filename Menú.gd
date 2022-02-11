@@ -9,7 +9,7 @@ func _ready():
 
 func _on_Viciar_pressed():
 	$Click.play()
-	get_tree().call_deferred("change_scene","res://Level.tscn")
+	get_tree().call_deferred("change_scene","res://Choose_Level.tscn")
 
 func _on_Salir_pressed():
 	get_tree().quit()
