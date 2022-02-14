@@ -14,7 +14,7 @@ func _process(delta):
 
 func _on_Escape_pressed():
 	$BGmusic.stop()
-	parallax_mov = false
+	parallax_mov = false	
 
 
 """
