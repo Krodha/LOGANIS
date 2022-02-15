@@ -14,7 +14,7 @@ func _process(delta):
 
 func _on_Escape_pressed():
 	$BGmusic.stop()
-	parallax_mov = false	
+	parallax_mov = false
 
 
 """
@@ -44,22 +44,22 @@ func _on_Fin_body_entered(body):
 
 
 func _on_CRUCES_body_entered(body):
-	yield(get_tree().create_timer(1.0),"timeout")
 	parallax_mov = false
+	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
 		get_tree().call_deferred("reload_current_scene")
 
 
 func _on_ESQUELETO_body_entered(body):
-	yield(get_tree().create_timer(1.0),"timeout")
 	parallax_mov = false
+	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
 		get_tree().call_deferred("reload_current_scene")
 
 
 func _on_ESQUELETO2_body_entered(body):
-	yield(get_tree().create_timer(1.0),"timeout")
 	parallax_mov = false
+	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
 		get_tree().call_deferred("reload_current_scene")
 

@@ -2146,12 +2146,7 @@ shape = SubResource( 224 )
 
 [node name="HUD" parent="." instance=ExtResource( 13 )]
 
-[node name="Player" parent="." instance=ExtResource( 9 )]
-light_mask = 3
-position = Vector2( 142.999, 377.489 )
-velocidad = 1
-
-[node name="Escape" type="Button" parent="."]
+[node name="Escape" type="Button" parent="HUD"]
 margin_left = 589.36
 margin_top = 4.76218
 margin_right = 2393.36
@@ -2161,8 +2156,13 @@ custom_fonts/font = ExtResource( 15 )
 icon = ExtResource( 16 )
 flat = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
+
+[node name="Player" parent="." instance=ExtResource( 9 )]
+light_mask = 3
+position = Vector2( 142.999, 377.489 )
+velocidad = 1
 
 [node name="BGmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
@@ -2174,6 +2174,6 @@ volume_db = -10.0
 [connection signal="body_entered" from="CAMINO/ParallaxLayer/ESQUELETO" to="." method="_on_ESQUELETO_body_entered"]
 [connection signal="body_entered" from="CAMINO/ParallaxLayer/ESQUELETO2" to="." method="_on_ESQUELETO2_body_entered"]
 [connection signal="body_entered" from="CAMINO/ParallaxLayer/Fin" to="." method="_on_Fin_body_entered"]
+[connection signal="pressed" from="HUD/Escape" to="HUD" method="_on_Escape_pressed"]
+[connection signal="pressed" from="HUD/Escape" to="." method="_on_Escape_pressed"]
 [connection signal="perder" from="Player" to="." method="_on_Player_perder"]
-[connection signal="pressed" from="Escape" to="HUD" method="_on_Escape_pressed"]
-[connection signal="pressed" from="Escape" to="." method="_on_Escape_pressed"]
