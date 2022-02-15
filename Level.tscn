@@ -2021,7 +2021,7 @@ points = PoolVector2Array( 448, 512, 448, 512, 480, 512, 480, 544, 448, 544 )
 } ]
 0/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=222]
+[sub_resource type="ConvexPolygonShape2D" id=225]
 points = PoolVector2Array( 4.16666, 32, 16.6667, 2.5, 27.5, 32 )
 
 [sub_resource type="TileSet" id=223]
@@ -2035,14 +2035,14 @@ points = PoolVector2Array( 4.16666, 32, 16.6667, 2.5, 27.5, 32 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 222 )
+0/shape = SubResource( 225 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 222 ),
+"shape": SubResource( 225 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0

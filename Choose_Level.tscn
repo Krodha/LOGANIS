@@ -7,18 +7,41 @@
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.561249, 0 )
 scale = Vector2( 9.99981, 9.99998 )
 texture = ExtResource( 1 )
 centered = false
 
-[node name="Button" type="Button" parent="."]
-margin_left = 33.0
-margin_top = 69.0
-margin_right = 98.0
-margin_bottom = 124.0
+[node name="Primero" type="Button" parent="."]
+margin_left = 172.185
+margin_top = 118.95
+margin_right = 237.185
+margin_bottom = 173.95
 text = "1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="Atras" type="Button" parent="."]
+margin_left = 15.1532
+margin_top = 18.5206
+margin_right = 67.1532
+margin_bottom = 56.5206
+text = "ATRÁS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tutorial" type="Button" parent="."]
+margin_left = 65.3347
+margin_top = 118.898
+margin_right = 141.335
+margin_bottom = 172.898
+text = "TUTORIAL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Primero" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_Tutorial_pressed"]
