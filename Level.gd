@@ -40,7 +40,7 @@ func _on_Player_perder():
 
 func _on_Fin_body_entered(body):
 	if body is KinematicBody2D:
-		get_tree().call_deferred("change_scene", "res://Menú.tscn")
+		get_tree().call_deferred("change_scene", "res://Choose_Level.tscn")
 
 
 func _on_CRUCES_body_entered(body):
