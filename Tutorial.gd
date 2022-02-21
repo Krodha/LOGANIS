@@ -39,3 +39,7 @@ func _on_Player_perder():
 	parallax_mov = false
 	yield(get_tree().create_timer(1.0), "timeout")
 	get_tree().call_deferred("change_scene", "res://Choose_Level.tscn")
+
+
+func _on_HUD_escape():
+	parallax_mov = false

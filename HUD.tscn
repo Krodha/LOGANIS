@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Sounds/Sonido perder.wav" type="AudioStream" id=1]
 [ext_resource path="res://Sprites/Fonts/standard_style.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Sprites/Fondo/Restart menu.png" type="Texture" id=3]
 [ext_resource path="res://HUD.gd" type="Script" id=4]
 [ext_resource path="res://Sounds/Click .wav" type="AudioStream" id=5]
+[ext_resource path="res://Sprites/Fondo/Retart Labe.png" type="Texture" id=6]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -53,5 +54,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Escape" type="Button" parent="."]
+margin_left = 589.36
+margin_top = 4.76218
+margin_right = 2393.36
+margin_bottom = 1802.76
+rect_scale = Vector2( 0.025, 0.025 )
+custom_fonts/font = ExtResource( 2 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
 [connection signal="pressed" from="MiniMenu/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="MiniMenu/reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="Escape" to="." method="_on_Escape_pressed"]

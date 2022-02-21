@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Chop Suey.wav-59b732ddce2d992f4b52016d95c5d83c.sample"
+
+[deps]
+
+source_file="res://Sounds/Chop Suey.wav"
+dest_files=[ "res://.import/Chop Suey.wav-59b732ddce2d992f4b52016d95c5d83c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

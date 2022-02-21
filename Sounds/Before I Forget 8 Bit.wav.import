@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Before I Forget 8 Bit.wav-5b8974861d1009d0ec20d277a04e4bf7.sample"
+
+[deps]
+
+source_file="res://Sounds/Before I Forget 8 Bit.wav"
+dest_files=[ "res://.import/Before I Forget 8 Bit.wav-5b8974861d1009d0ec20d277a04e4bf7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

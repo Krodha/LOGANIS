@@ -12,14 +12,14 @@ func _process(delta):
 		get_node("FONDO 1").scroll_base_offset += Vector2(-3,0) * 96 * delta
 		get_node("CAMINO").scroll_base_offset += Vector2(-4,0) * 100 * delta
 
-func _on_Escape_pressed():
+func _on_HUD_escape():
 	$BGmusic.stop()
 	parallax_mov = false
 
 
 """
 	DIRECTOR:
-	Lucas 
+		Lucas 
 	
 	DESARROLLADOR:
 		Cruces
@@ -62,4 +62,5 @@ func _on_ESQUELETO2_body_entered(body):
 	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
 		get_tree().call_deferred("reload_current_scene")
+
 
