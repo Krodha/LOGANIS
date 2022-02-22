@@ -13,7 +13,6 @@ const SUELO = Vector2(0,-1)
 
 
 func _process(delta):
-	
 	_is_on_floor(delta)
 	movimiento.x = 0
 
