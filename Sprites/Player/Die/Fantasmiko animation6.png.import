@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2.png-293f551eae0088f158eefbc4ecdaac7a.stex"
+path="res://.import/Fantasmiko animation6.png-1eca6f197517647752b265d7fd862770.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/2.png"
-dest_files=[ "res://.import/2.png-293f551eae0088f158eefbc4ecdaac7a.stex" ]
+source_file="res://Sprites/Player/Die/Fantasmiko animation6.png"
+dest_files=[ "res://.import/Fantasmiko animation6.png-1eca6f197517647752b265d7fd862770.stex" ]
 
 [params]
 

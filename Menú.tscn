@@ -6,11 +6,11 @@
 [ext_resource path="res://Menú.gd" type="Script" id=4]
 [ext_resource path="res://Sprites/Fonts/8bitOperatorPlus8-Bold.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Sprites/Fonts/8-bit Arcade In.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://Sprites/Player/3.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Player/4.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Player/5.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Player/1.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Player/2.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Player/Stand/2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Player/Stand/5.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Player/Stand/1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Player/Stand/3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Player/Stand/4.png" type="Texture" id=11]
 [ext_resource path="res://Sounds/Iron Man .wav" type="AudioStream" id=12]
 [ext_resource path="res://Sounds/Click .wav" type="AudioStream" id=14]
 
@@ -33,9 +33,9 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "Fantasmiko",
+"name": "Player",
 "speed": 5.0
 } ]
 
@@ -104,7 +104,7 @@ flat = true
 position = Vector2( 154.406, 474.788 )
 scale = Vector2( 0.428135, 0.436018 )
 frames = SubResource( 5 )
-animation = "Fantasmiko"
+animation = "Player"
 
 [node name="Bgmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
