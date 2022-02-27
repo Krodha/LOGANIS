@@ -17,7 +17,7 @@ func _process(delta):
 	movimiento.x = 0
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	if $RayCastSuelo.is_colliding():
 		saltos = 0
