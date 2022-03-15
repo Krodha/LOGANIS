@@ -22,15 +22,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 12 ), ExtResource( 3 ), ExtResource( 17 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Perder",
-"speed": 13.0
-}, {
 "frames": [ ExtResource( 14 ), ExtResource( 2 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "Movimiento",
+"name": "Normal",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 12 ), ExtResource( 3 ), ExtResource( 17 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 4 ), ExtResource( 5 ), null ],
+"loop": true,
+"name": "Perder",
+"speed": 14.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -40,7 +40,7 @@ height = 202.273
 [node name="Player" type="KinematicBody2D" groups=[
 "Player",
 ]]
-position = Vector2( -0.0251007, 0.0119934 )
+position = Vector2( -0.0251007, 0.641968 )
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -48,14 +48,13 @@ __meta__ = {
 }
 velocidad = 10
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -301.677, -359.302 )
+[node name="Animations" type="AnimatedSprite" parent="."]
+position = Vector2( 4.11224, 1.16838 )
 frames = SubResource( 1 )
-animation = "Movimiento"
-centered = false
+animation = "Normal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.450134, -0.0915222 )
+position = Vector2( -16.0065, 40.9206 )
 rotation = 0.10472
 shape = SubResource( 2 )
 
@@ -65,6 +64,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( -15.5563, 41.0121 )
 polygon = PoolVector2Array( 236.73, 281.781, 244.146, 238.343, 260.038, 215.035, 279.109, 182.192, 315.13, 166.3, 354.331, 176.895, 385.055, 197.024, 382.936, 248.938, 380.817, 301.911, 370.222, 457.652, 357.509, 509.566, 299.238, 541.35, 236.73, 551.944, 201.768, 565.717, 207.065, 545.588, 230.373, 478.841, 224.017, 413.155, 231.433, 365.479 )
 
 [node name="RayCastSuelo" type="RayCast2D" parent="."]
@@ -72,4 +72,5 @@ position = Vector2( 0.380981, -0.161469 )
 enabled = true
 cast_to = Vector2( 0, 220 )
 
+[connection signal="perder" from="." to="." method="_on_Player_perder"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

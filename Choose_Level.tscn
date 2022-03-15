@@ -12,16 +12,6 @@ scale = Vector2( 9.99981, 9.99998 )
 texture = ExtResource( 1 )
 centered = false
 
-[node name="Primero" type="Button" parent="."]
-margin_left = 172.185
-margin_top = 118.95
-margin_right = 237.185
-margin_bottom = 173.95
-text = "1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Atras" type="Button" parent="."]
 margin_left = 15.1532
 margin_top = 18.5206
@@ -42,6 +32,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Primero" to="." method="_on_Button_pressed"]
+[node name="Primero" type="Button" parent="."]
+margin_left = 169.399
+margin_top = 119.0
+margin_right = 235.399
+margin_bottom = 174.0
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Segundo" type="Button" parent="."]
+margin_left = 255.854
+margin_top = 118.53
+margin_right = 320.854
+margin_bottom = 173.53
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
 [connection signal="pressed" from="Tutorial" to="." method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="Primero" to="." method="_on_Primero_pressed"]
+[connection signal="pressed" from="Segundo" to="." method="_on_Segundo_pressed"]

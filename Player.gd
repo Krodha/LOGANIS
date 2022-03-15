@@ -18,6 +18,7 @@ func _process(delta):
 
 
 func _physics_process(_delta):
+
 	
 	if $RayCastSuelo.is_colliding():
 		saltos = 0
@@ -33,9 +34,7 @@ func _physics_process(_delta):
 
 
 func _is_on_floor(delta):
-	
 	movimiento += GRAVEDAD * 200 * delta
-	$AnimatedSprite.play("Movimiento")
 	position += movimiento * delta
 	movimiento = move_and_slide(movimiento, SUELO)
 	
@@ -43,8 +42,10 @@ func _is_on_floor(delta):
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Obstaculo"):
 		emit_signal("perder")
-		$AnimatedSprite.play("Perder")
 	if body.is_in_group("fin"):
 		get_tree().call_deferred("change_scene", "res://Menú.tscn")
 
 
+
+func _on_Player_perder():
+	$Animations.play("Perder")
