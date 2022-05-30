@@ -19,5 +19,6 @@ func _on_HUD_escape():
 
 func _on_Player_perder():
 	parallax_mov = false
+	$BGmusic.stop()
 	yield(get_tree().create_timer(1.0), "timeout")
 	get_tree().call_deferred("reload_current_scene")

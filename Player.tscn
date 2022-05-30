@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Stand/2.png" type="Texture" id=2]
@@ -19,18 +19,19 @@
 [ext_resource path="res://Sprites/Player/Die/Fantasmiko animation4.png" type="Texture" id=17]
 [ext_resource path="res://Sprites/Player/Stand/4.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/Player/Die/Fantasmiko animation6.png" type="Texture" id=19]
+[ext_resource path="res://Sounds/Sonido perder.wav" type="AudioStream" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 14 ), ExtResource( 2 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "Normal",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 12 ), ExtResource( 3 ), ExtResource( 17 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 4 ), ExtResource( 5 ), null ],
 "loop": true,
 "name": "Perder",
 "speed": 14.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 2 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Normal",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -71,6 +72,10 @@ polygon = PoolVector2Array( 236.73, 281.781, 244.146, 238.343, 260.038, 215.035,
 position = Vector2( 0.380981, -0.161469 )
 enabled = true
 cast_to = Vector2( 0, 220 )
+
+[node name="PerderSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+volume_db = 2.0
 
 [connection signal="perder" from="." to="." method="_on_Player_perder"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

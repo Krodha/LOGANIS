@@ -10,7 +10,8 @@ const GRAVEDAD = Vector2(0,5)
 const JUMP_HEIGHT = -450
 const SUELO = Vector2(0,-1)
 
-
+func _ready():
+	$Animations.play("Normal")
 
 func _process(delta):
 	_is_on_floor(delta)
@@ -40,12 +41,13 @@ func _is_on_floor(delta):
 	
 
 func _on_Area2D_body_entered(body):
+	
 	if body.is_in_group("Obstaculo"):
 		emit_signal("perder")
+		$Animations.play("Perder")
+		$PerderSound.play()
 	if body.is_in_group("fin"):
 		get_tree().call_deferred("change_scene", "res://Menú.tscn")
 
 
 
-func _on_Player_perder():
-	$Animations.play("Perder")

@@ -45,6 +45,8 @@ func _on_Fin_body_entered(body):
 
 func _on_CRUCES_body_entered(body):
 	parallax_mov = false
+	$Player/Animations.play("Perder")
+	$Player/PerderSound.play()
 	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
 		get_tree().call_deferred("reload_current_scene")
@@ -52,6 +54,8 @@ func _on_CRUCES_body_entered(body):
 
 func _on_ESQUELETO_body_entered(body):
 	parallax_mov = false
+	$Player/Animations.play("Perder")
+	$Player/PerderSound.play()
 	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
 		get_tree().call_deferred("reload_current_scene")
@@ -59,6 +63,8 @@ func _on_ESQUELETO_body_entered(body):
 
 func _on_ESQUELETO2_body_entered(body):
 	parallax_mov = false
+	$Player/Animations.play("Perder")
+	$Player/PerderSound.play()
 	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
 		get_tree().call_deferred("reload_current_scene")
