@@ -1491,7 +1491,6 @@ velocidad = 1
 
 [node name="BGmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
-volume_db = -10.0
 
 [node name="HUD" parent="." instance=ExtResource( 13 )]
 

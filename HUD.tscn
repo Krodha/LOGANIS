@@ -22,33 +22,42 @@ position = Vector2( 319.47, 320.495 )
 scale = Vector2( 0.624869, 0.6248 )
 texture = ExtResource( 3 )
 
-[node name="menu" type="Button" parent="MiniMenu"]
-anchor_left = 2.98023e-08
-anchor_top = -0.00268668
-anchor_right = 2.98023e-08
-anchor_bottom = -0.00268668
-margin_left = -312.0
-margin_top = 1.75116
-margin_right = -98.0
-margin_bottom = 46.7512
-rect_scale = Vector2( 3, 3 )
+[node name="continuar" type="Button" parent="MiniMenu"]
+margin_left = -178.251
+margin_top = -133.938
+margin_right = -105.251
+margin_bottom = -119.938
+rect_scale = Vector2( 5, 5 )
 custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
-text = "MENU"
+text = "CONTINUAR"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="reanudar" type="Button" parent="MiniMenu"]
-margin_left = -312.0
-margin_top = -133.0
-margin_right = -99.0
-margin_bottom = -92.0
+margin_left = -96.2368
+margin_top = -27.4799
+margin_right = -27.2368
+margin_bottom = -13.4799
 rect_scale = Vector2( 3, 3 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
-text = "REANUDAR"
+text = "REINICIAR"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="Button" parent="MiniMenu"]
+margin_left = -55.3846
+margin_top = 56.4233
+margin_right = -14.3846
+margin_bottom = 70.4233
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
+text = "MENU"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -67,6 +76,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[connection signal="pressed" from="MiniMenu/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="MiniMenu/continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="MiniMenu/reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="MiniMenu/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Escape" to="." method="_on_Escape_pressed"]

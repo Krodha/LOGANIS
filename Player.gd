@@ -41,7 +41,6 @@ func _is_on_floor(delta):
 	
 
 func _on_Area2D_body_entered(body):
-	
 	if body.is_in_group("Obstaculo"):
 		emit_signal("perder")
 		$Animations.play("Perder")

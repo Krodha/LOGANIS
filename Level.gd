@@ -11,11 +11,22 @@ func _process(delta):
 		get_node("FONDO 2").scroll_base_offset += Vector2(-2,0) * 48 * delta
 		get_node("FONDO 1").scroll_base_offset += Vector2(-3,0) * 96 * delta
 		get_node("CAMINO").scroll_base_offset += Vector2(-4,0) * 100 * delta
-
+	else:
+		if $HUD/MiniMenu/continuar.pressed:
+			$BGmusic.stream_paused = false
+			parallax_mov = true
+			$HUD/MiniMenu.visible = false
+	
 func _on_HUD_escape():
-	$BGmusic.stop()
+	$BGmusic.stream_paused = true
 	parallax_mov = false
 
+func player_perder():
+	parallax_mov = false
+	$Player/Animations.play("Perder")
+	$Player/PerderSound.play()
+	yield(get_tree().create_timer(1.0), "timeout")
+	get_tree().call_deferred("reload_current_scene")
 
 """
 	DIRECTOR:
@@ -44,29 +55,17 @@ func _on_Fin_body_entered(body):
 
 
 func _on_CRUCES_body_entered(body):
-	parallax_mov = false
-	$Player/Animations.play("Perder")
-	$Player/PerderSound.play()
-	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
-		get_tree().call_deferred("reload_current_scene")
+		player_perder()
 
 
 func _on_ESQUELETO_body_entered(body):
-	parallax_mov = false
-	$Player/Animations.play("Perder")
-	$Player/PerderSound.play()
-	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
-		get_tree().call_deferred("reload_current_scene")
+		player_perder()
 
 
 func _on_ESQUELETO2_body_entered(body):
-	parallax_mov = false
-	$Player/Animations.play("Perder")
-	$Player/PerderSound.play()
-	yield(get_tree().create_timer(1.0),"timeout")
 	if body is KinematicBody2D:
-		get_tree().call_deferred("reload_current_scene")
+		player_perder()
 
 
