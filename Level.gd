@@ -12,7 +12,8 @@ func _process(delta):
 		get_node("FONDO 1").scroll_base_offset += Vector2(-3,0) * 96 * delta
 		get_node("CAMINO").scroll_base_offset += Vector2(-4,0) * 100 * delta
 	else:
-		if $HUD/MiniMenu/continuar.pressed:
+		if $HUD/MiniMenu/VBoxContainer/continuar.pressed:
+			$HUD/Click.play()
 			$BGmusic.stream_paused = false
 			parallax_mov = true
 			$HUD/MiniMenu.visible = false
