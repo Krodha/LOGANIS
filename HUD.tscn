@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sounds/Sonido perder.wav" type="AudioStream" id=1]
 [ext_resource path="res://Sprites/Fonts/standard_style.tres" type="DynamicFont" id=2]
@@ -6,6 +6,19 @@
 [ext_resource path="res://HUD.gd" type="Script" id=4]
 [ext_resource path="res://Sounds/Click .wav" type="AudioStream" id=5]
 [ext_resource path="res://Sprites/Fondo/Retart Labe.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Fonts/8bitOperatorPlus8-Bold.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 1
+outline_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+font_data = ExtResource( 7 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -17,31 +30,40 @@ stream = ExtResource( 5 )
 stream = ExtResource( 1 )
 
 [node name="MiniMenu" type="Sprite" parent="."]
-visible = false
 position = Vector2( 319.47, 320.495 )
 scale = Vector2( 0.624869, 0.6248 )
 texture = ExtResource( 3 )
 
-[node name="continuar" type="Button" parent="MiniMenu"]
-margin_left = -178.251
-margin_top = -133.938
-margin_right = -105.251
-margin_bottom = -119.938
-rect_scale = Vector2( 5, 5 )
-custom_fonts/font = ExtResource( 2 )
+[node name="VBoxContainer" type="VBoxContainer" parent="MiniMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -701.0
+margin_top = -610.5
+margin_right = -323.0
+margin_bottom = -413.5
+custom_constants/separation = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="continuar" type="Button" parent="MiniMenu/VBoxContainer"]
+margin_right = 378.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
 text = "CONTINUAR"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="reanudar" type="Button" parent="MiniMenu"]
-margin_left = -96.2368
-margin_top = -27.4799
-margin_right = -27.2368
-margin_bottom = -13.4799
-rect_scale = Vector2( 3, 3 )
-custom_fonts/font = ExtResource( 2 )
+[node name="reanudar" type="Button" parent="MiniMenu/VBoxContainer"]
+margin_top = 74.0
+margin_right = 378.0
+margin_bottom = 123.0
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
 text = "REINICIAR"
 flat = true
@@ -49,12 +71,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="menu" type="Button" parent="MiniMenu"]
-margin_left = -55.3846
-margin_top = 56.4233
-margin_right = -14.3846
-margin_bottom = 70.4233
-rect_scale = Vector2( 3, 3 )
+[node name="menu" type="Button" parent="MiniMenu/VBoxContainer"]
+margin_top = 148.0
+margin_right = 378.0
+margin_bottom = 197.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color_hover = Color( 0.780392, 0, 1, 1 )
 text = "MENU"
@@ -76,7 +96,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[connection signal="pressed" from="MiniMenu/continuar" to="." method="_on_continuar_pressed"]
-[connection signal="pressed" from="MiniMenu/reanudar" to="." method="_on_reanudar_pressed"]
-[connection signal="pressed" from="MiniMenu/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="MiniMenu/VBoxContainer/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="MiniMenu/VBoxContainer/reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="MiniMenu/VBoxContainer/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Escape" to="." method="_on_Escape_pressed"]
