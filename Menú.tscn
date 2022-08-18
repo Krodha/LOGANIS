@@ -22,13 +22,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=2]
 size = 100
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 8 ) ],
 "loop": true,
@@ -36,7 +36,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 5 )
 
 [node name="Menú" type="Node"]
@@ -67,7 +67,7 @@ __meta__ = {
 margin_top = 175.0
 margin_right = 640.0
 margin_bottom = 245.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.678431, 0.290196, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "LOGANIS"
@@ -101,7 +101,7 @@ flat = true
 [node name="Personaje" type="AnimatedSprite" parent="."]
 position = Vector2( 154.406, 474.788 )
 scale = Vector2( 0.428135, 0.436018 )
-frames = SubResource( 5 )
+frames = SubResource( 3 )
 animation = "Player"
 
 [node name="Bgmusic" type="AudioStreamPlayer" parent="."]
@@ -117,7 +117,7 @@ margin_right = 520.851
 margin_bottom = 274.12
 rect_rotation = -25.0
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "v ALFA"
 __meta__ = {
